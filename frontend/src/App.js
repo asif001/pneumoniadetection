@@ -25,7 +25,7 @@ class App extends React.Component{
 	onClickHandler = () => {
 	    const data = new FormData() 
 	    data.append('file', this.state.selectedFile)
-	    axios.post("http://localhost:5000/predict", data, { 
+	    axios.post("http://34.66.216.62:5000/predict", data, { 
       		// receive two    parameter endpoint url ,form data
 	  }).then((res) => { // then print response status
             this.setState({diagnosis: res.data})

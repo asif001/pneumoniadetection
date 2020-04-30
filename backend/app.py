@@ -5,7 +5,7 @@ from model.predict import predict_pneumonia
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def hello_world():
     return 'Hello World!'
 
@@ -22,4 +22,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
